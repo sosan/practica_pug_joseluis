@@ -82,7 +82,7 @@ body {
   -ms-grid-column: 1;
   grid-area: i;
   display: grid;
-  grid-template-columns: 1.875rem minmax(50%, 80%);
+  grid-template-columns: 1.875rem 100%;
   grid-template-rows: 1.3125rem 5.3125rem 3.125rem auto;
   grid-template-areas: ". ." ". h" ". ." ". m";
   height: 70%;
