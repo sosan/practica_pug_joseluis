@@ -15,10 +15,14 @@
 /* **************************** */
 @font-face {
   font-family: "arialblack";
+  font-weight: normal;
+  font-style: normal;
   src: url("../assets/font/arial-black.woff2") format("woff2"), url("../assets/font/arial-black.woff") format("woff");
 }
 @font-face {
   font-family: "arialregular";
+  font-weight: normal;
+  font-style: normal;
   src: url("../assets/font/arial-regular.woff2") format("woff2"), url("../assets/font/arial-regular.woff") format("woff");
 }
 body {
@@ -71,7 +75,7 @@ body {
 /* **************************** */
 #container {
   display: grid;
-  grid-template-columns: 1fr minmax(50rem, 56.25rem);
+  grid-template-columns: 1fr 1.5fr;
   grid-template-rows: 1fr;
   grid-template-areas: "i d";
   height: 100%;
@@ -82,7 +86,7 @@ body {
   -ms-grid-column: 1;
   grid-area: i;
   display: grid;
-  grid-template-columns: 1.875rem 100%;
+  grid-template-columns: 1.875rem minmax(450px, 600px);
   grid-template-rows: 1.3125rem 5.3125rem 3.125rem auto;
   grid-template-areas: ". ." ". h" ". ." ". m";
   height: 90%;
@@ -94,9 +98,10 @@ body {
   -ms-grid-column: 2;
   grid-area: d;
   background-image: url("../assets/img/desktop/perro_pug.webp");
-  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
 
 .header {

@@ -3,15 +3,45 @@
 /* **************************** */
 
 
-// Mixin - Background Image
-@mixin imagenFondo($url, $posX, $posY, $size, $rep: no-repeat, $att: scroll)
+// Mixin - Background Image con posX posY
+@mixin backgroundimage($url, $posX, $posY, $size, $rep: no-repeat, $att: scroll)
 {
-    background-image: url(#{$url});
-    background-position: $posX $posY;
+    @if ($posX == center)
+    {
+        @include backgroundimagecenter($url, center, $posY, $rep ,$att )
+    }
+    @else if ($posY == center)
+    {
+        @include backgroundimagecenter($url, center, $posY, $rep, $att)
+    }
+    @else
+    {
+        background-image: url("#{$url}");
+        background-position: $posX $posY;
+    
+        background-size: $size;
+        background-repeat: $rep;
+        background-attachment: $att;
+
+    }
+    
+    
+}
+
+// Mixin - Background Image con posicion center
+@mixin backgroundimagecenter($url, $position, $size, $rep: no-repeat, $att: scroll) {
+    background-image: url("#{$url}");
+
+    @if ($position == center) {
+        background-position: center;
+    }
+
     background-size: $size;
     background-repeat: $rep;
     background-attachment: $att;
 }
+
+
 
 // mixin gradiente de izquierda a derecha
 @mixin linear-gradient-right($colorOrigen, $colorDestino) 
@@ -39,4 +69,79 @@
 {
     background: $colorDestino;
     background: linear-gradient(to bottom, $colorOrigen 0%, $colorDestino 100%);
+}
+
+
+//-------------------- font face autogenerado --------//
+@mixin font-face($nombre, $nombrearchivo, $negrita: normal, $estilo: normal) 
+{
+
+    @font-face {
+        font-family: "#{$nombre}";
+        font-weight: $negrita;
+        font-style: $estilo;
+
+        src: url("../assets/font/"+ $nombrearchivo + ".woff2") format("woff2"),
+            url("../assets/font/"+ $nombrearchivo + ".woff") format("woff");
+
+    }
+
+}
+
+//-------------------- COLORIZAR LINK --------//
+@mixin coloriceLink($link, $visit, $hover, $active) {
+    a {
+
+        color: $link;
+
+        &:visited {
+            color: $visit;
+        }
+
+        &:hover {
+            color: $hover;
+
+        }
+
+        &:active {
+            color: $active;
+        }
+
+    }
+
+
+}
+
+// ----- generar boton -------
+@mixin bton($colorTexto, $bg, $border: 0, $pad: 1rem) {
+    padding: $pad;
+    color: $colorTexto;
+    background-color: $bg;
+    border: $border solid lighten($bg, 80%);
+
+}
+
+//--- generar un input
+@mixin inputFormat($bordercolor: black, $sizeborder: 1px, $bgcolor: white, $textcolor: black, $textcolorplaceholder: gray,
+    $paddingtop: 0.3rem, $paddingright: 0.5rem, $paddingbottom: 0.3rem, $paddingleft: 0.5rem) {
+
+    // width: 50ch;
+    width: 100%;
+    box-sizing: border-box;
+
+    // padding-top: map-get($map: $paddings, $key: inputs); //0.3rem;
+    padding-top: $paddingtop;
+    padding-right: $paddingright;
+    padding-bottom: $paddingbottom;
+    padding-left: $paddingleft;
+
+    border: $sizeborder solid $bordercolor;
+    background-color: $bgcolor; //map-get($colores, color_blanco);
+    color: $textcolor;
+
+    &::placeholder {
+        font-weight: 300;
+        font-family: sans-serif;
+        color: $textcolorplaceholder;
+    }
 }
