@@ -85,7 +85,7 @@ body {
   grid-template-columns: 1.875rem 100%;
   grid-template-rows: 1.3125rem 5.3125rem 3.125rem auto;
   grid-template-areas: ". ." ". h" ". ." ". m";
-  height: 70%;
+  height: 90%;
   width: 80%;
 }
 
@@ -110,7 +110,7 @@ body {
   -ms-grid-column: 2;
   grid-area: m;
   justify-self: flex-start;
-  align-self: flex-start;
+  align-self: center;
 }
 
 /* **************************** */
