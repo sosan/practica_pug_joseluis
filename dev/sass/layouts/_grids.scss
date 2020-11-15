@@ -19,7 +19,7 @@
     grid-area: i;
 
     display: grid;
-    grid-template-columns: calcularrem(30px) 100%;
+    grid-template-columns: 1.875rem minmax(50%, 80%);
     grid-template-rows: calcularrem(21px) calcularrem(85px) calcularrem(50px) auto;
     grid-template-areas:
     ". ."
