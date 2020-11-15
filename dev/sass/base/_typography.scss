@@ -1,0 +1,62 @@
+/* **************************** */
+/* TIPOGRAFIA */
+/* **************************** */
+
+
+@font-face {
+    font-family: "arialblack";
+    src: url("../assets/font/arial-black.woff2") format("woff2"),
+        url("../assets/font/arial-black.woff") format("woff");
+
+}
+
+@font-face {
+    font-family: "arialregular";
+    src: url("../assets/font/arial-regular.woff2") format("woff2"),
+        url("../assets/font/arial-regular.woff") format("woff");
+}
+
+
+body
+{
+    font-family: $font-primary;
+    font-size: 16px;
+}
+
+
+
+.elemento {
+    &__nombreempresa {
+        font-size: $font-size-big;
+        font-weight: 900;
+
+    }
+    
+    &__titulo {
+        font-family: $font-secondary;
+        font-size: $font-size-large;
+        font-weight: 900;
+    }
+    
+    &__parrafo {
+        
+        font-size: $font-size-normal;
+        font-weight: 700;
+        text-align: left;
+        line-height: 140%;
+        
+    }
+
+    &__boton
+    {
+
+        font-size: $font-size-big;
+        font-weight: 900;
+        line-height: $font-line-height-small;
+        font-family: $font-secondary;
+
+    }
+
+    
+
+}

@@ -1,0 +1,104 @@
+/* **************************** */
+/* IMPORTAR PARCIALES PARA COMPILAR */
+/* **************************** */
+/* **************************** */
+/* VARIABLES */
+/* **************************** */
+/* **************************** */
+/* FUNCTIONS */
+/* **************************** */
+/* **************************** */
+/* MIXINS */
+/* **************************** */
+/* **************************** */
+/* TIPOGRAFIA */
+/* **************************** */
+@font-face {
+  font-family: "arialblack";
+  src: url("../assets/font/arial-black.woff2") format("woff2"), url("../assets/font/arial-black.woff") format("woff");
+}
+@font-face {
+  font-family: "arialregular";
+  src: url("../assets/font/arial-regular.woff2") format("woff2"), url("../assets/font/arial-regular.woff") format("woff");
+}
+body {
+  font-family: "arialregular";
+  font-size: 16px;
+}
+
+.elemento__nombreempresa {
+  font-size: calcularrem(24px);
+  font-weight: 900;
+}
+.elemento__titulo {
+  font-size: calcularrem(36px);
+  font-weight: 900;
+}
+.elemento__parrafo {
+  font-size: calcularrem(18px);
+  font-weight: bold;
+}
+
+.elemento__boton {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 33px;
+}
+
+/* **************************** */
+/* BOTONES */
+/* **************************** */
+/* **************************** */
+/* DROPDOWNS */
+/* **************************** */
+/* **************************** */
+/* SLIDERS */
+/* **************************** */
+/* **************************** */
+/* HEADER */
+/* **************************** */
+/* **************************** */
+/* FOOTER */
+/* **************************** */
+/* **************************** */
+/* FORMS */
+/* **************************** */
+/* **************************** */
+/* GRIDS */
+/* **************************** */
+/* **************************** */
+/* SIDEBARS */
+/* **************************** */
+/* **************************** */
+/* NAVIGATOR */
+/* **************************** */
+/* **************************** */
+/* INDEX */
+/* **************************** */
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+.listado__elemento-boton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  background: #BE2424;
+  border-radius: 10px;
+}
+
+/* **************************** */
+/* CONTACTO */
+/* **************************** */
+/* **************************** */
+/* GALERIA */
+/* **************************** */
+/* **************************** */
+/* BLOG */
+/* **************************** */
+/* **************************** */
+/* PRODUCTOS */
+/* **************************** */

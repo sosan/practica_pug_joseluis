@@ -1,0 +1,9 @@
+if datasite["listadoheader"]["logo"]["href"]
+    a(class=datasite["listadoheader"]["logo"]["aclassname"], href=datasite["listadoheader"]["logo"]["href"])
+        //- aunque haya solo 2 elementos en la parte del header
+        //- implimentamos un for 
+        //- pasa como parametroo el objeto que contiene
+        //- una lista de elementos
+        //- segundo parametro es el prefix bem
+        -const prefixbem_ul = datasite["listadoheader"]["logo"]["ulclassname"];
+        +mostrarlistado_tabla(datasite["listadoheader"]["logo"]["elementos"], prefixbem_ul)

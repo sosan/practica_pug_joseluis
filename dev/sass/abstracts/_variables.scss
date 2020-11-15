@@ -1,0 +1,46 @@
+/* **************************** */
+/* VARIABLES */
+/* **************************** */
+
+// Tipografía
+$font-primary: "arialregular";
+$font-secondary: "arialblack";
+
+// Tamaños tipográficos
+$font-size-base: 16px; // Base
+
+$h1: 36px;
+$h2: 24px;
+$h3: 15px;
+
+$font-size-large: calcularrem($h1);
+$font-size-big: calcularrem($h2);
+$font-size-normal: calcularrem($h3);
+
+$font-line-height-small: calcularrem(33px);
+$font-line-height-big: calcularrem(33px);
+
+
+
+// Colores 
+$color-blanco: rgb(255, 255, 255);
+$color-beig: rgb(232, 232, 232);
+$color-rojo: rgb(190, 36, 36);
+
+
+$texto-color-default: $color-beig;
+$logo-color: $color-blanco;
+$boton-color: $color-rojo;
+
+// Colores fondo
+$background-naranja: rgb(237, 184, 79);
+
+
+//Tamaños
+$anchoparrafo: calcularrem(350px);
+$gap-small: calcularrem(5px);
+$gap-grande: calcularrem(10px);
+
+$border-radius-small: calcularrem(10px);
+
+$boton-padding: calcularrem(10px) calcularrem(15px);

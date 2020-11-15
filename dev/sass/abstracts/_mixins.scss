@@ -1,0 +1,42 @@
+/* **************************** */
+/* MIXINS */
+/* **************************** */
+
+
+// Mixin - Background Image
+@mixin imagenFondo($url, $posX, $posY, $size, $rep: no-repeat, $att: scroll)
+{
+    background-image: url(#{$url});
+    background-position: $posX $posY;
+    background-size: $size;
+    background-repeat: $rep;
+    background-attachment: $att;
+}
+
+// mixin gradiente de izquierda a derecha
+@mixin linear-gradient-right($colorOrigen, $colorDestino) 
+{
+    background: $colorDestino;
+    background: linear-gradient(to right, $colorOrigen 0%, $colorDestino 100%);
+}
+
+// mixin gradiente de derecha a izquierda
+@mixin linear-gradient-left($colorOrigen, $colorDestino)
+{
+    background: $colorDestino;
+    background: linear-gradient(to left, $colorOrigen 0%, $colorDestino 100%);
+}
+
+// mixin gradiente de abajo a arriba
+@mixin linear-gradient-top($colorOrigen, $colorDestino)
+{
+    background: $colorDestino;
+    background: linear-gradient(to top, $colorOrigen 0%, $colorDestino 100%);
+}
+
+// mixin gradiente de arriba a abajo
+@mixin linear-gradient-bottom($colorOrigen, $colorDestino)
+{
+    background: $colorDestino;
+    background: linear-gradient(to bottom, $colorOrigen 0%, $colorDestino 100%);
+}

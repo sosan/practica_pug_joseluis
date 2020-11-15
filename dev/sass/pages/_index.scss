@@ -1,0 +1,66 @@
+/* **************************** */
+/* INDEX */
+/* **************************** */
+
+html
+{
+
+}
+
+
+body {
+    background-color: $background-naranja;
+    color: $texto-color-default;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.main__listado {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: $gap-grande;
+}
+
+
+
+
+.link__listadoheader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: $gap-small;
+}
+
+.elemento__nombreempresa, .elemento__titulo {
+    color: $logo-color;
+
+
+}
+
+
+
+.listado__elemento-boton 
+{
+    align-self: flex-end;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.elemento__boton
+{
+    background: $boton-color;
+    border-radius: $border-radius-small;
+    padding: $boton-padding;
+
+}
+

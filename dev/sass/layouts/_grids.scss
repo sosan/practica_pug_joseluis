@@ -1,0 +1,61 @@
+/* **************************** */
+/* GRIDS */
+/* **************************** */
+
+#container
+{
+    display: grid;
+    grid-template-columns: 1fr minmax(calcularrem(800px), calcularrem(900px));
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "i d"
+    ;
+
+    height: 100%;
+}
+
+#container__izquierda
+{
+    grid-area: i;
+
+    display: grid;
+    grid-template-columns: calcularrem(30px) 100%;
+    grid-template-rows: calcularrem(21px) calcularrem(85px) calcularrem(50px) auto;
+    grid-template-areas:
+    ". ."
+    ". h"
+    ". ."
+    ". m"
+    
+    ;
+
+    height: 70%;
+    width: 80%;
+
+
+}
+
+#container__derecha {
+    grid-area: d;
+
+    background-image: url("../assets/img/desktop/perro_pug.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.header
+{
+    grid-area: h;
+}
+
+.main
+{
+    grid-area: m;
+
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+
+
+
